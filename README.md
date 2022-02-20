@@ -15,4 +15,4 @@
 
 <img src="preview.png">
 
-[DEMO](https://elena-davydik.github.io/vk-dashboard//index.html)
+[DEMO](https://elena-davydik.github.io/vk-dashboard/index.html)
