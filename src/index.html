@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./scss/index.scss">
+    <title>VK Dashboard</title>
+</head>
+
+<body>
+    <div class="app">
+        <!--------- NAV --------->
+        <nav class="nav">
+            <img src="/assets/nav/logo.svg" alt="Logo" class="nav__logo">
+            <div class="nav__menu">
+                <a class="nav__link" rel="stylesheet" href="/">
+                    <img class="nav__img-link" src="/assets/nav/news.svg" alt="News">
+                </a>
+                <a class="nav__link" rel="stylesheet" href="/">
+                    <img class="nav__img-link" src="/assets/nav/friends.svg" alt="Friends">
+                </a>
+                <a class="nav__link" rel="stylesheet" href="/">
+                    <img class="nav__img-link" src="/assets/nav/messedges.svg" alt="Messedges">
+                </a>
+                <a class="nav__link" rel="stylesheet" href="/">
+                    <img class="nav__img-link" src="/assets/nav/music.svg" alt="Music">
+                </a>
+                <a class="nav__link nav__link--active" rel="stylesheet" href="/">
+                    <img class="nav__img-link" src="/assets/nav/statistic.svg" alt="Statistic">
+                </a>
+                <a class="nav__link" rel="stylesheet" href="/">
+                    <img class="nav__img-link" src="/assets/nav/settings.svg" alt="Settings">
+                </a>
+            </div>
+            <div class="nav__toggle-container">
+                <input type="checkbox" class="nav__toggle">
+            </div>
+            <button class="nav__menu-burger">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#CACACA" class="bi bi-list" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                  </svg>
+            </button>
+        </nav>
+        
+        <!--------- HEADER --------->
+        <header class="header">
+            <h1 class="header__title">Statistics</h1>
+            <div class="header__search-form">
+                <input class="header__search" type="search" placeholder="   Search">
+                <button class="header__notification-btn">
+                    <img class="header__notification-btn-img" src="/assets/header/notification.svg" alt="Drop down">
+                </button>
+            </div>
+            <div class="header__profile">
+                <p class="header__user-name">Anya</p>
+                <img class="header__avatar" src="/assets/header/avatar.svg" alt="Profile photo">
+                <button class="header__dropdown-btn">
+                    <img class="header__dropdown-btn-img" src="/assets/header/drop-down.svg" alt="Drop down">
+                </button>
+            </div>
+        </header>
+
+        <!--------- MAIN --------->
+        <main class="main">
+            <div class="statistics-unit statistics-friends">
+                <h3 class="statistics-unit__title">Friends</h3>
+                <button class="statistics-unit__menu-btn">
+                    <img class="statistics-unit__menu-btn-img" src="/assets/main/menu.svg" alt="Menu">
+                </button>
+                <p class="statistics-unit__info">271 people</p>
+                <p class="statistics-unit__statistic">
+                    + 0,7%
+                    <img src="/assets/main/arrow-up.svg" alt="Up">
+                </p>
+            </div>
+            <div class="statistics-unit statistics-visitors">
+                <h3 class="statistics-unit__title">Unique visitors </h3>
+                <button class="statistics-unit__menu-btn">
+                    <img class="statistics-unit__menu-btn-img" src="/assets/main/menu.svg" alt="Menu">
+                </button>
+                <p class="statistics-unit__info">69 people</p>
+                <p class="statistics-unit__statistic">
+                    - 1,7%
+                    <img src="/assets/main/arrow-down.svg" alt="Down">
+                </p>
+            </div>
+            <div class="statistics-unit statistics-followers">
+                <h3 class="statistics-unit__title">Followers</h3> 
+                <button class="statistics-unit__menu-btn">
+                    <img class="statistics-unit__menu-btn-img" src="/assets/main/menu.svg" alt="Menu">
+                </button>
+                <p class="statistics-unit__info">288 people</p>
+                <p class="statistics-unit__statistic">
+                    + 1%
+                    <img src="/assets/main/arrow-up.svg" alt="Up">
+                </p>
+            </div>
+            <div class="line-graph">
+                <h3 class="line-graph__title">Audience reach</h3>
+                <p class="line-graph__date">31/01/2020 – 06/02/2020</p>
+                <input type="checkbox" class="line-graph__checkbox-left" id="total" name="total" checked>
+                <label for="total" class="line-graph__text-checkbox">Total</label>
+                <input type="checkbox" class="line-graph__checkbox-right" id="follower" name="follower">
+                <label for="follower" class="line-graph__text-checkbox">Follower</label>
+                <img class="line-graph__img" src="/assets/main/line-graph.svg" alt="Audience reach graph">
+            </div>
+            <div class="pie-graph">
+                <h3 class="pie-graph__title">Reach by device</h3>
+                <img class="pie-graph__img" src="/assets/main/pie-graph.svg" alt="Reach by device graph">
+                <div class="pie-graph__elements-container">
+                    <div class="pie-graph__element-left"></div>
+                    <label for="desktop" class="pie-graph__element-text">Desktop</label>
+                    <div class="pie-graph__element-right"></div>
+                    <label for="mobile" class="pie-graph__element-text">Mobile views</label>
+                </div>
+            </div>
+            <div class="histogram">
+                <h3 class="histogram__title">Gender / Age</h3>
+                <div class="histogram__elements-container">
+                    <div class="histogram__element-left"></div>
+                    <label for="women" class="histogram__element-text">Women</label>
+                    <div class="histogram__element-right"></div>
+                    <label for="men" class="histogram__element-text">Men</label>
+                </div>
+                <img class="histogram__img" src="/assets/main/histogram.svg" alt="Gender / Age graph">
+            </div>
+            <div class="progress-bar-graph">
+                <h3 class="progress-bar-graph__title">Geo</h3>
+                <div class="progress-bar-graph__settings">
+                    <button class="progress-bar-graph__setting progress-bar-graph__setting--active">Counry</button>
+                    <button class="progress-bar-graph__setting">City</button>
+                </div>
+                <ul class="progress-bar-graph__items">
+                    <li class="progress-bar-graph__item">
+                        <div class="progress-bar-graph__item-title">
+                            <p class="progress-bar-graph__country">Russia</p>
+                            <p class="progress-bar-graph__percent-text">94%</p>
+                        </div>
+                        <div class="progress-bar-graph__field">
+                            <div class="progress-bar-graph__percent progress-bar-graph__russia"></div>
+                        </div>
+                    </li>
+                    <li class="progress-bar-graph__item">
+                        <div class="progress-bar-graph__item-title">
+                            <p class="progress-bar-graph__country">Ukraine</p>
+                            <p class="progress-bar-graph__percent-text">0,20%</p>
+                        </div>
+                        <div class="progress-bar-graph__field">
+                            <div class="progress-bar-graph__percent progress-bar-graph__ukraine"></div>
+                        </div>
+                    </li>
+                    <li class="progress-bar-graph__item">
+                        <div class="progress-bar-graph__item-title">
+                            <p class="progress-bar-graph__country">Mongolia</p>
+                            <p class="progress-bar-graph__percent-text">0,13%</p>
+                        </div>
+                        <div class="progress-bar-graph__field">
+                            <div class="progress-bar-graph__percent progress-bar-graph__mongolia"></div>
+                        </div>
+                    </li>
+                    <li class="progress-bar-graph__item">
+                        <div class="progress-bar-graph__item-title">
+                            <p class="progress-bar-graph__country">China</p>
+                            <p class="progress-bar-graph__percent-text">0,26%</p>
+                        </div>
+                        <div class="progress-bar-graph__field">
+                            <div class="progress-bar-graph__percent progress-bar-graph__china"></div>
+                        </div>
+                    </li>
+                    <li class="progress-bar-graph__item">
+                        <div class="progress-bar-graph__item-title">
+                            <p class="progress-bar-graph__country">USA</p>
+                            <p class="progress-bar-graph__percent-text">0,20%</p>
+                        </div>
+                        <div class="progress-bar-graph__field">
+                            <div class="progress-bar-graph__percent progress-bar-graph__usa"></div>
+                        </div>
+                    </li>
+                    <li class="progress-bar-graph__item">
+                        <div class="progress-bar-graph__item-title">
+                            <p class="progress-bar-graph__country">Other</p>
+                            <p class="progress-bar-graph__percent-text">1,37%</p>
+                        </div>
+                        <div class="progress-bar-graph__field">
+                            <div class="progress-bar-graph__percent progress-bar-graph__other"></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+.header {
+    padding: 0 50px 0;
+
+    display: grid;
+    grid-template-columns: 120px 200px 1fr;
+    grid-template-rows: 90px;
+    column-gap: 45px;
+    align-items: center;
+    grid-area: header;
+
+    background: $extra-dark-color;
+    border-radius: 0 $rounded 0 0;
+    
+    &__title {
+        @include font($fs-lg, $bold, 36px);
+        color: $primery-color;
+    }
+
+    &__search-form {
+        display: grid;
+        grid-template-columns: 160px 1fr;
+        column-gap: 20px;
+    }
+
+    &__search {
+        width: 165px;
+        height: 32px;
+        color: $secondary-color;
+        background-color: inherit;
+        border: 1px solid $medium-color;
+        border-radius: 7px;
+    }
+
+    &__profile {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        align-items: center;
+        column-gap: 15px;
+        justify-self: end;
+    }
+
+    &__user-name {
+        @include font($fs-md, $medium, 23px);
+        color: $primery-color;
+    }
+}
+
+@include xl {
+    .header {
+        border-radius: 0;
+    }
+}
+
+@include sm {
+    .header {
+        grid-template-columns: repeat(2, 1fr);
+
+        &__profile {
+            display: none;
+        }
+    }
+}

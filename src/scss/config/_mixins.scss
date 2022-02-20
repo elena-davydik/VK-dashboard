@@ -1,0 +1,42 @@
+// ---------- TYPOGRAPHY ---------- \\
+@mixin font($size, $weight, $height) {
+   font-size: $size; 
+   font-weight: $weight;
+   line-height: $height;
+}
+
+// ---------- MEDIA QUERIS ---------- \\
+ // Extra large devices
+ @mixin xl {
+   @media (max-width: #{$screen-xl-max}) {
+       @content;
+   }
+}
+
+// Large devices
+@mixin lg {
+   @media (max-width: #{$screen-lg-max}) {
+       @content;
+   }
+}
+
+// Medium devices
+@mixin md {
+   @media (max-width: #{$screen-md-max}) {
+      @content;
+   }
+}
+
+// Small devices
+@mixin sm {
+   @media (max-width: #{$screen-sm-max}) {
+      @content;
+   }
+}
+
+// ExtraSmall devices
+@mixin xs {
+   @media (max-width: #{$screen-xs-max}) {
+      @content;
+   }
+}
