@@ -1,4 +1,4 @@
-# vk-dashboard
+# VK-dashboard
 
 ## BIO
 
